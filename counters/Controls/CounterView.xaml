@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:namespace="clr-namespace:counters"
+             x:Class="counters.Controls.CounterView">
+
+    <Border x:Name="rameczkaStyl" Stroke="gray" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" WidthRequest="320" HeightRequest="120" BackgroundColor="Black">
+        <VerticalStackLayout HeightRequest="100" WidthRequest="300">
+            <HorizontalStackLayout>
+                <Entry x:Name="counterBox" Placeholder="Counter" WidthRequest="205" HeightRequest="30" HorizontalTextAlignment="Center"/>
+                <ImageButton x:Name="saveCounter" Source="folderdownload.png" WidthRequest="30" HeightRequest="30" BackgroundColor="White" Padding="3" Clicked="saveCounter_Clicked"/>
+                <ImageButton x:Name="editCounter" Source="pipette.png" WidthRequest="30" HeightRequest="30" BackgroundColor="White" Padding="3" Margin="2,0,0,0" Clicked="editCounter_Clicked"/>
+                <ImageButton x:Name="deleteCounter" Source="trash.png" WidthRequest="30" HeightRequest="30" BackgroundColor="White" Padding="3" Margin="2,0,0,0" Clicked="deleteCounter_Clicked"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Button x:Name="minus" Text="-" WidthRequest="100" HeightRequest="69" HorizontalOptions="End" VerticalOptions="End" Clicked="minus_Clicked" FontAttributes="Bold"/>
+                <Label x:Name="value" Text="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="70" WidthRequest="100" FontAttributes="Bold"/>
+                <Button x:Name="plus" Text="+" WidthRequest="100" HeightRequest="69" Clicked="plus_Clicked" FontAttributes="Bold"/>
+                
+            </HorizontalStackLayout>
+            <Label x:Name="id" Text="" HeightRequest="0" WidthRequest="0"/>
+        </VerticalStackLayout>
+    </Border>
+    
+</ContentView>

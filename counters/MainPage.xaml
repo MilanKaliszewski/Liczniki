@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:counters.Controls"
+             x:Class="counters.MainPage">
+
+    <FlexLayout Direction="Column" HorizontalOptions="FillAndExpand">
+
+        <Label Text="Twoje liczniki:"
+                   FontSize="18"
+                   HorizontalTextAlignment="Start" />
+
+        <FlexLayout FlexLayout.Grow="11" x:Name="layoutFlex" Direction="Row" Wrap="Wrap" JustifyContent="SpaceEvenly" VerticalOptions="FillAndExpand">
+
+
+        </FlexLayout>
+        <FlexLayout  Wrap="Wrap" Direction="Row" FlexLayout.Grow="1" HorizontalOptions="FillAndExpand" JustifyContent="SpaceEvenly">
+            <Label Text="" WidthRequest="1150"/>
+            <Button x:Name="add" Text="+" WidthRequest="50" HeightRequest="50" TextColor="Black" FontAttributes="Bold" FontSize="30" Clicked="Add_Clicked" FlexLayout.AlignSelf="End"/>
+            <ImageButton x:Name="RemoveAll" Source="trash.png" WidthRequest="50" HeightRequest="50" Clicked="RemoveAll_Clicked"   BackgroundColor="White" CornerRadius="7" Padding="10"/>
+            <ImageButton x:Name="RemoveOnlyDisplayed" Source="trash.png" WidthRequest="50" HeightRequest="50" Clicked="RemoveOnlyDisplayed_Clicked"   BackgroundColor="White" CornerRadius="7" Padding="10"/>
+            <ImageButton x:Name="LoadAll" Source="folderupload.png" WidthRequest="50" HeightRequest="50" Clicked="LoadAll_Clicked"   BackgroundColor="White" CornerRadius="7" Padding="10"/>
+        </FlexLayout>
+    </FlexLayout>
+
+
+</ContentPage>
